@@ -61,7 +61,7 @@
     "colors": "^1.1.2",
     "electron": "^5.0.0",
     "express": "^4.16.2",
-    "express-ipfilter": "^1.0.1",
+    "express-ipfilter": "^1.1.1",
     "feedme": "latest",
     "helmet": "^3.21.1",
     "iconv-lite": "latest",
