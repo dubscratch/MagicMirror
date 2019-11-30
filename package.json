@@ -12,7 +12,9 @@
     "test:unit": "NODE_ENV=test ./node_modules/mocha/bin/mocha tests/unit --recursive",
     "test:e2e": "NODE_ENV=test ./node_modules/mocha/bin/mocha tests/e2e --recursive",
     "config:check": "node tests/configs/check_config.js",
-    "lint": "grunt"
+    "lint": "grunt",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -57,19 +59,21 @@
   },
   "dependencies": {
     "colors": "^1.1.2",
-    "electron": "^3.0.13",
+    "electron": "^5.0.0",
     "express": "^4.16.2",
     "express-ipfilter": "^1.0.1",
     "feedme": "latest",
-    "helmet": "^3.9.0",
+    "helmet": "^3.21.1",
     "iconv-lite": "latest",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.12",
     "moment": "latest",
     "request": "^2.88.0",
     "rrule": "^2.6.2",
     "rrule-alt": "^2.2.8",
     "simple-git": "^1.85.0",
     "socket.io": "^2.1.1",
-    "valid-url": "latest"
-  }
+    "valid-url": "latest",
+    "snyk": "^1.252.0"
+  },
+  "snyk": true
 }
