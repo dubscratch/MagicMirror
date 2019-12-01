@@ -59,7 +59,7 @@
   },
   "dependencies": {
     "colors": "^1.1.2",
-    "electron": "^5.0.0",
+    "electron": "^5.0.12",
     "express": "^4.16.2",
     "express-ipfilter": "^1.0.1",
     "feedme": "latest",
