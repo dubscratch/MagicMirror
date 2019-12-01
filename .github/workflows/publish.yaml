@@ -18,7 +18,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - run: npm install
       - run: mkdir mm
-      - run: mv * mm/
+      - run: mv * mm/ || true
       - run: tar -C mm/ -czf magicmirror.tgz mm/
       - name: Create Release
         id: create_release
