@@ -17,17 +17,17 @@ jobs:
           node-version: '10.x'
           registry-url: 'https://registry.npmjs.org'
       - run: npm install
-      - run: mkdir mm
-      - run: mv * mm/ || true
-      - run: cd mm && tar -czf ../magicmirror.tgz .
+      - run: mkdir magicmirror
+      - run: mv * magicmirror/ || true
+      - run: tar -czf ./magicmirror.tgz magicmirror/
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
+          tag_name: ${{ GITHUB_SHA }}
+          release_name: Release ${{ GITHUB_SHA }}
           body: |
             Tarball of magicmirror
           draft: false
