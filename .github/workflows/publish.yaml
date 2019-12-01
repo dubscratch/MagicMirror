@@ -20,7 +20,7 @@ jobs:
       - run: mkdir magicmirror
       - run: mv * magicmirror/ || true
       - run: tar -czf ./magicmirror.tgz magicmirror/
-      - run: echo ${{ git }}
+      - run: echo ${{ git.id }}
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
