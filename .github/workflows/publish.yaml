@@ -20,15 +20,14 @@ jobs:
       - run: mkdir magicmirror
       - run: mv * magicmirror/ || true
       - run: tar -czf ./magicmirror.tgz magicmirror/
-      - run: echo ${{ git.id }}
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ git.commit }}
-          release_name: Release ${{ git.commit }}
+          tag_name: sha-${{ github.sha }}
+          release_name: Release ${{ github.sha }}
           body: |
             Tarball of magicmirror
           draft: false
