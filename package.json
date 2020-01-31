@@ -72,7 +72,7 @@
     "simple-git": "^1.85.0",
     "socket.io": "^2.3.0",
     "valid-url": "latest",
-    "snyk": "^1.252.0"
+    "snyk": "^1.290.1"
   },
   "snyk": true
 }
