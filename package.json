@@ -65,7 +65,7 @@
     "helmet": "^3.21.2",
     "iconv-lite": "latest",
     "lodash": "^4.17.15",
-    "moment": "latest",
+    "moment": "2.29.4",
     "request": "^2.88.0",
     "rrule": "^2.6.2",
     "rrule-alt": "^2.2.8",
